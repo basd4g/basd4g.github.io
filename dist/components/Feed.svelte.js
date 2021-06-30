@@ -97,7 +97,7 @@ function instance($$self, $$props, $$invalidate) {
 			return "はてなブログ";
 		}
 
-		if ((/^https:\/\/qiita\.com\/basd4g/).test(feed.link)) {
+		if ((/^https:\/\/qiita\.com\/yammerjp/).test(feed.link)) {
 			return "Qiita";
 		}
 
