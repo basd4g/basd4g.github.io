@@ -21,6 +21,7 @@ import {
 import Avater from "./components/Avater.svelte.js";
 import Feeds from "./components/Feeds.svelte.js";
 import AboutMe from "./components/AboutMe.svelte.js";
+import Links from "./components/Links.svelte.js";
 import feedsJson from "./feeds.json.proxy.js";
 
 function create_fragment(ctx) {
@@ -29,12 +30,15 @@ function create_fragment(ctx) {
 	let t0;
 	let aboutme;
 	let t1;
-	let feeds_1;
+	let links;
 	let t2;
+	let feeds_1;
+	let t3;
 	let footer;
 	let current;
 	avater = new Avater({});
 	aboutme = new AboutMe({});
+	links = new Links({});
 	feeds_1 = new Feeds({ props: { feeds: /*feeds*/ ctx[0] } });
 
 	return {
@@ -44,13 +48,15 @@ function create_fragment(ctx) {
 			t0 = space();
 			create_component(aboutme.$$.fragment);
 			t1 = space();
-			create_component(feeds_1.$$.fragment);
+			create_component(links.$$.fragment);
 			t2 = space();
+			create_component(feeds_1.$$.fragment);
+			t3 = space();
 			footer = element("footer");
 			footer.innerHTML = `<div>©2020 Keisuke Nakayama</div>`;
-			attr(footer, "class", "svelte-1wonys6");
+			attr(footer, "class", "svelte-1ywqnxy");
 			attr(div1, "id", "app");
-			attr(div1, "class", "svelte-1wonys6");
+			attr(div1, "class", "svelte-1ywqnxy");
 		},
 		m(target, anchor) {
 			insert(target, div1, anchor);
@@ -58,8 +64,10 @@ function create_fragment(ctx) {
 			append(div1, t0);
 			mount_component(aboutme, div1, null);
 			append(div1, t1);
-			mount_component(feeds_1, div1, null);
+			mount_component(links, div1, null);
 			append(div1, t2);
+			mount_component(feeds_1, div1, null);
+			append(div1, t3);
 			append(div1, footer);
 			current = true;
 		},
@@ -68,12 +76,14 @@ function create_fragment(ctx) {
 			if (current) return;
 			transition_in(avater.$$.fragment, local);
 			transition_in(aboutme.$$.fragment, local);
+			transition_in(links.$$.fragment, local);
 			transition_in(feeds_1.$$.fragment, local);
 			current = true;
 		},
 		o(local) {
 			transition_out(avater.$$.fragment, local);
 			transition_out(aboutme.$$.fragment, local);
+			transition_out(links.$$.fragment, local);
 			transition_out(feeds_1.$$.fragment, local);
 			current = false;
 		},
@@ -81,6 +91,7 @@ function create_fragment(ctx) {
 			if (detaching) detach(div1);
 			destroy_component(avater);
 			destroy_component(aboutme);
+			destroy_component(links);
 			destroy_component(feeds_1);
 		}
 	};

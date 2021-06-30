@@ -97,7 +97,7 @@ function create_fragment(ctx) {
 			}
 
 			attr(h2, "v-if", "feeds.length !== 0");
-			attr(div, "class", "feeds svelte-4eehkl");
+			attr(div, "class", "feeds svelte-1g2bm0g");
 		},
 		m(target, anchor) {
 			insert(target, div, anchor);

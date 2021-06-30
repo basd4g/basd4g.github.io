@@ -40,12 +40,12 @@ function create_fragment(ctx) {
 			t5 = space();
 			div1 = element("div");
 			div1.textContent = `${/*description*/ ctx[4]()}`;
-			attr(h3, "class", h3_class_value = "title " + (/*index*/ ctx[1] === 0 ? "isFirst" : "") + " svelte-11sfkhu");
-			attr(div0, "class", "date_and_site svelte-11sfkhu");
-			attr(div1, "class", "description svelte-11sfkhu");
-			attr(div2, "class", "feed svelte-11sfkhu");
+			attr(h3, "class", h3_class_value = "title " + (/*index*/ ctx[1] === 0 ? "isFirst" : "") + " svelte-1ksjnk4");
+			attr(div0, "class", "date_and_site svelte-1ksjnk4");
+			attr(div1, "class", "description svelte-1ksjnk4");
+			attr(div2, "class", "feed svelte-1ksjnk4");
 			attr(a, "href", a_href_value = /*feed*/ ctx[0].link);
-			attr(a, "class", "svelte-11sfkhu");
+			attr(a, "class", "svelte-1ksjnk4");
 		},
 		m(target, anchor) {
 			insert(target, a, anchor);
@@ -60,7 +60,7 @@ function create_fragment(ctx) {
 		p(ctx, [dirty]) {
 			if (dirty & /*feed*/ 1 && t0_value !== (t0_value = /*feed*/ ctx[0].title + "")) set_data(t0, t0_value);
 
-			if (dirty & /*index*/ 2 && h3_class_value !== (h3_class_value = "title " + (/*index*/ ctx[1] === 0 ? "isFirst" : "") + " svelte-11sfkhu")) {
+			if (dirty & /*index*/ 2 && h3_class_value !== (h3_class_value = "title " + (/*index*/ ctx[1] === 0 ? "isFirst" : "") + " svelte-1ksjnk4")) {
 				attr(h3, "class", h3_class_value);
 			}
 
@@ -89,8 +89,8 @@ function instance($$self, $$props, $$invalidate) {
 	}
 
 	function site() {
-		if ((/^https:\/\/memo\.basd4g\.net/).test(feed.link)) {
-			return "memo.basd4g.net";
+		if ((/^https:\/\/memo\.yammer\.jp/).test(feed.link)) {
+			return "memo.yammer.jp";
 		}
 
 		if ((/^https:\/\/basd4g\.hatenablog\.com/).test(feed.link)) {
@@ -105,7 +105,7 @@ function instance($$self, $$props, $$invalidate) {
 	}
 
 	function description() {
-		const maxLength = 100;
+		const maxLength = 400;
 
 		if (feed.contentSnippet.length <= maxLength) {
 			return feed.contentSnippet;

@@ -18,10 +18,10 @@ function create_fragment(ctx) {
 		c() {
 			div1 = element("div");
 
-			div1.innerHTML = `<img alt="yammerjp avater icon" src="../assets/gather_fishes_200x200.jpg" srcset="../assets/gather_fishes_200x200.jpg 1x, ../assets/gather_fishes_400x400.jpg 2x" class="avater-icon svelte-1tv6qyq" width="200px" height="200px"/> 
+			div1.innerHTML = `<img alt="yammerjp avater icon" src="../assets/gather_fishes_200x200.jpg" srcset="../assets/gather_fishes_200x200.jpg 1x, ../assets/gather_fishes_400x400.jpg 2x" class="avater-icon svelte-1dxbb3t" width="200px" height="200px"/> 
   <div>Keisuke Nakayama</div>`;
 
-			attr(div1, "class", "avater svelte-1tv6qyq");
+			attr(div1, "class", "avater svelte-1dxbb3t");
 		},
 		m(target, anchor) {
 			insert(target, div1, anchor);

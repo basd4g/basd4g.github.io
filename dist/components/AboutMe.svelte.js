@@ -12,35 +12,29 @@ import {
 } from "../../_snowpack/pkg/svelte/internal.js";
 
 function create_fragment(ctx) {
-	let div1;
+	let div;
 
 	return {
 		c() {
-			div1 = element("div");
+			div = element("div");
 
-			div1.innerHTML = `<h2>About Me</h2> 
-  <table class="svelte-1fs1oyf"><tr><td class="svelte-1fs1oyf">Nickname</td>  <td class="svelte-1fs1oyf">yammer<br/>やんまー</td></tr> 
-  <tr><td class="svelte-1fs1oyf">Name</td>  <td class="svelte-1fs1oyf">Keisuke, Nakayama<br/>中山 慶祐</td></tr> 
-  <tr><td class="svelte-1fs1oyf">Education</td> 
-    <td class="svelte-1fs1oyf">Department of Information and Computer Sciences, Saitama University
-    <br/>埼玉大学工学部情報システム工学科 (2017-2021)</td></tr></table> 
-  <h2>Links</h2> 
-  <div class="links svelte-1fs1oyf"><a href="https://twitter.com/yammerjp" class="svelte-1fs1oyf">Twitter</a> 
-    <a href="https://github.com/yammerjp" class="svelte-1fs1oyf">GitHub</a> 
-    <a href="https://qiita.com/basd4g" class="svelte-1fs1oyf">Qiita</a> 
-    <a href="https://basd4g.hatenablog.com" class="svelte-1fs1oyf">はてなブログ</a> 
-    <a href="https://memo.yammer.jp" class="svelte-1fs1oyf">memo.yammer.jp</a></div>`;
+			div.innerHTML = `<h2>About Me</h2> 
+  <table class="svelte-18jjhzd"><tr><td class="svelte-18jjhzd">Nickname</td>  <td class="svelte-18jjhzd">yammer<br/>やんまー</td></tr> 
+  <tr><td class="svelte-18jjhzd">Name</td>  <td class="svelte-18jjhzd">Keisuke, Nakayama<br/>中山 慶祐</td></tr> 
+  <tr><td class="svelte-18jjhzd">Education</td> 
+    <td class="svelte-18jjhzd">Department of Information and Computer Sciences, Saitama University
+    <br/>埼玉大学工学部情報システム工学科 (2017-2021)</td></tr></table>`;
 
-			attr(div1, "class", "about-me svelte-1fs1oyf");
+			attr(div, "class", "about-me");
 		},
 		m(target, anchor) {
-			insert(target, div1, anchor);
+			insert(target, div, anchor);
 		},
 		p: noop,
 		i: noop,
 		o: noop,
 		d(detaching) {
-			if (detaching) detach(div1);
+			if (detaching) detach(div);
 		}
 	};
 }
